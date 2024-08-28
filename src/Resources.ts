@@ -33,6 +33,6 @@ export interface Resources {
 }
 
 export function accessKeySerialize(accessKey:AccessKey):string {
+    if (!accessKey) return '';
     return `${accessKey.id}|${accessKey.type}|${accessKey.resource}`;
-
 }

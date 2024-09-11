@@ -19,17 +19,34 @@ export interface AccessKey {
     resource: string;
 }
 
-export interface Pod {
+/**
+ * @interface PodAccess contains data related on oaccessing one pod for doing someting
+ * @field name, the name of the pod (including nothing extra)
+ * @field namespace, the namespace of the pod
+ * @field accessKey, for compatibility, the accessKey to view pod logs
+ * @field viewAccessKey, the accessKey to view pod logs
+ * @field restartAccessKey, the accessKey to restart pods
+ */
+export interface PodData {
     name: string;
     namespace: string;
     accessKey: AccessKey;
+    viewAccessKey: AccessKey;
+    restartAccessKey: AccessKey;
 }
 
-export interface Resources {
+/**
+ * @interface ClusterPods contains data about a cluster and all the popds found in the cluster that match required access
+ * @field name is the name of the cluster
+ * @field url is the kwirth url (we will use it for asking for access keys)
+ * @field title is a short description of the cluster
+ * @field data is an array of 'PodAccess'
+ */
+export interface ClusterPods {
     name: string;
     url: string;
     title?: string;
-    data: Pod[];
+    data: PodData[];
 }
 
 export function accessKeySerialize(accessKey:AccessKey):string {

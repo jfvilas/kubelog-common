@@ -1,6 +1,6 @@
 {
   "name": "@jfvilas/plugin-kubelog-common",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Common functionalities for the Backstage Kubelog plugin frontend and backend",
   "keywords": [
     "Backstage",

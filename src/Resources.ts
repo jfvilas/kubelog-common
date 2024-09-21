@@ -13,11 +13,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-export interface AccessKey {
-    id: string;
-    type: string;
-    resource: string;
-}
+// export interface AccessKey {
+//     id: string;
+//     type: string;
+//     resource: string;
+// }
 
 /**
  * @interface PodAccess contains data related on oaccessing one pod for doing someting
@@ -27,6 +27,9 @@ export interface AccessKey {
  * @field viewAccessKey, the accessKey to view pod logs
  * @field restartAccessKey, the accessKey to restart pods
  */
+
+import { AccessKey } from '@jfvilas/kwirth-common'
+
 export interface PodData {
     name: string;
     namespace: string;
@@ -36,20 +39,20 @@ export interface PodData {
 }
 
 /**
- * @interface ClusterPods contains data about a cluster and all the popds found in the cluster that match required access
+ * @interface ClusterValidPods contains data about a cluster and all the pods found in the cluster that match required access
  * @field name is the name of the cluster
  * @field url is the kwirth url (we will use it for asking for access keys)
  * @field title is a short description of the cluster
  * @field data is an array of 'PodAccess'
  */
-export interface ClusterPods {
+export interface ClusterValidPods {
     name: string;
     url: string;
     title?: string;
     data: PodData[];
 }
 
-export function accessKeySerialize(accessKey:AccessKey):string {
-    if (!accessKey) return '';
-    return `${accessKey.id}|${accessKey.type}|${accessKey.resource}`;
-}
+// export function accessKeySerialize(accessKey:AccessKey):string {
+//     if (!accessKey) return '';
+//     return `${accessKey.id}|${accessKey.type}|${accessKey.resource}`;
+// }

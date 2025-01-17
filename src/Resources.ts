@@ -13,22 +13,16 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-// export interface AccessKey {
-//     id: string;
-//     type: string;
-//     resource: string;
-// }
+import { AccessKey } from '@jfvilas/kwirth-common'
 
 /**
- * @interface PodAccess contains data related on oaccessing one pod for doing someting
+ * @interface PodData contains data related on oaccessing one pod for doing someting
  * @field name, the name of the pod (including nothing extra)
  * @field namespace, the namespace of the pod
  * @field accessKey, for compatibility, the accessKey to view pod logs
  * @field viewAccessKey, the accessKey to view pod logs
  * @field restartAccessKey, the accessKey to restart pods
  */
-
-import { AccessKey } from '@jfvilas/kwirth-common'
 
 export interface PodData {
     name: string;
@@ -51,8 +45,3 @@ export interface ClusterValidPods {
     title?: string;
     data: PodData[];
 }
-
-// export function accessKeySerialize(accessKey:AccessKey):string {
-//     if (!accessKey) return '';
-//     return `${accessKey.id}|${accessKey.type}|${accessKey.resource}`;
-// }

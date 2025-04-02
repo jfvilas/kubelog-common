@@ -1,6 +1,6 @@
 {
   "name": "@jfvilas/plugin-kubelog-common",
-  "version": "0.10.2",
+  "version": "0.11.3",
   "description": "Common functionalities for the Backstage Kubelog plugin frontend and backend",
   "keywords": [
     "Backstage",
@@ -21,8 +21,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jfvilas/kubelog-common"
-  },  
+    "url": "git+https://github.com/jfvilas/kubelog-common.git"
+  },
   "publishConfig": {
     "access": "public",
     "main": "dist/index.cjs.js",

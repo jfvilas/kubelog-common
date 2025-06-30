@@ -27,6 +27,7 @@ import { AccessKey } from '@jfvilas/kwirth-common'
 export interface PodData {
     name: string;
     namespace: string;
+    containers: string[];
     accessKey: AccessKey;
     viewAccessKey: AccessKey;
     restartAccessKey: AccessKey;
